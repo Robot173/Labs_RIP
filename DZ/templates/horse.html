@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Лошадь с кличкой: "{{ horse.horse_name }}"{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <ul class="navbar-brand">Скачки-ставочки</ul>
+            <button class="btn navbar-btn align-right" onclick="location.href='../main/1'">Вернуться к списку</button>
+            <button class="btn navbar-btn" onclick="location.href='../logout/'">Выйти</button>
+        </div>
+    </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="col-lg-5 info">
+            <h3 class="text-center">Информация о лошади</h3>
+            <ul>Кличка данной лошади: {{ horse.horse_name }}</ul>
+            <ul>Хозяин данной лошади: {{ horse.horse_owner }}</ul>
+            <ul>Клуб, в котором лошадь состоит: {{ horse.horse_club }}</ul>
+            <img src="{{ horse.horse_picture.url }}" height="300" width="300">
+        </div>
+        <div class="col-lg-3 users">
+            <h3 class="text-center">Список пользователей, поставивших на эту лошадь</h3>
+            {% for user in users %}
+                <li class="list-group-item">Имя: {{ user.username }}</li>
+            {% endfor %}
+            <form method="post">
+                {% csrf_token %}
+                <input class="btn" type="submit" value="Поставить">
+            </form>
+
+        </div>
+
+    </div>
+ 
+{% endblock %}

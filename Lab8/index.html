@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <title>График</title>
+</head>
+<body>
+    <div>
+        <form>
+            <p>Введите ограничения для оси OX </p>
+            <p>От: <input name="from" class="from">  </p>
+            <p>До: <input name="to" class="to">  </p>
+            <p>Введите функцию </p>
+            <p>Функция: <input name="fun" class="fun"> </p>
+            <p><button class="plot" type="button">Построить график</button></p>
+        </form>
+        <div class="graph"></div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js"></script>
+        <script src='index.js'></script>
+    </div>
+</body>
+</html>

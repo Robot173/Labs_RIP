@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block script %}<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <ul class="navbar-brand">Скачки-ставочки</ul>
+            <button class="btn navbar-btn align-right" onclick="location.href='../add/'">Добавить лошадь</button>
+            <button class="btn navbar-btn" onclick="location.href='../logout/'">Выйти</button>
+        </div>
+    </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="box-group2">
+        {% for horse in horses %}
+            <div class="panel col-lg-5 form-object">
+                <ul name="name">Кличка: {{ horse.horse_name }}</ul>
+                <ul name="owner">Владелец: {{ horse.horse_owner }}</ul>
+                <ul name="club">Клуб: {{ horse.horse_club }}</ul>
+                <img class="img-rounded" src="{{ horse.horse_picture.url }}" height="200" width="200">
+                <button class="btn" onclick="location.href='../horse/id={{ horse.pk }}'">Перейти</button>
+            </div>
+        {% endfor %}
+        </div>
+    {% if prev %}<button class="btn" onclick="location.href='../main/{{ prev }}'">Предыдущая страница</button>{% endif %}
+    {% if next %}<button class="btn" onclick="location.href='../main/{{ next }}'">Следующая страница</button>{% endif %}
+    </div>
+{% endblock %}

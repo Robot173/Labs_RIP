@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Страница авторизации{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form class="form-signin" id="auth" name="auth" method="post">
+            {% csrf_token %}
+            <h2>Войти на сайт</h2>
+            {{ auth_form.as_p }}
+            <input class="btn" type="submit" id="but" name="but" value="Войти" />
+        </form>
+        <br>
+        {% if errors %}
+            <ul style="color: red">
+                {{ errors }}
+            </ul>
+        {% endif %}
+        <form class="form-reg" id="reg" name="reg" method="post">
+        {%	csrf_token	%}
+        <h2>Регистрация</h2>
+            {{ reg_form.as_p }}
+            <input class="btn" type="submit" id="but" name="but" value="Зарегистрировать" ></input>
+        </form>
+    </div>
+{% endblock %}

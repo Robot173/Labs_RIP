@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавить лошадь{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <ul class="navbar-brand">Скачки-ставочки</ul>
+            <button class="btn navbar-btn align-right" onclick="location.href='../main/1'">Вернуться обратно</button>
+            <button class="btn navbar-btn" onclick="location.href='../logout/'">Выйти</button>
+        </div>
+    </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h1>Добавить лошадь</h1>
+        <div>
+        <form class="col-lg-4" id="addhorse" name="addhorse" method="post" enctype="multipart/form-data" onsubmit="return validateHorse()">
+            {% csrf_token %}
+            <span style="color: red" id="id_horse_name"></span>
+            <span style="color: red" id="id_horse_owner"></span>
+            <span style="color: red" id="id_horse_club"></span>
+            <span style="color: red" id="id_horse_picture"></span>
+            {{ form.as_p }}
+            <input class="btn" type="submit" value="Добавить лошадь" />
+        </form>
+        </div>
+    </div>
+    <script src="/static/js/add_horse.js"></script>
+{% endblock %}

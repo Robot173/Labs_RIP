@@ -1,0 +1,106 @@
+body{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eeeeee;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.btn{
+    background-color: rgba(53, 166, 221, 0.6);
+}
+
+.form-reg{
+    box-sizing: border-box;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: ghostwhite;
+    border-radius: 10px;
+}
+
+.form-signin{
+    box-sizing: border-box;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: ghostwhite;
+    border-radius: 10px;
+}
+
+
+.form-signin input[name="username"] {
+    margin-bottom: -10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[name="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-object{
+    min-width: 550px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-object ul{
+    position: absolute;
+    font-size: 18px;
+    left: 200px;
+}
+
+.form-object ul[name="name"]{
+    top:20px;
+}
+
+.form-object ul[name="owner"]{
+    top:50px;
+}
+
+.form-object ul[name="club"]{
+    top:80px;
+}
+
+.form-object button{
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+}
+
+.navbar{
+    background-color: #6e6e6e;
+}
+.navbar button{
+    margin: 10px;
+}
+
+.navbar ul{
+    color: whitesmoke;
+}
+
+.info{
+    background-color: rgba(108, 121, 245, 0.23);
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.info img{
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 5px;
+}
+.info ul{
+    font-size: 16px;
+}
+
+.users{
+    background-color: rgba(108, 121, 245, 0.23);
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px;
+}

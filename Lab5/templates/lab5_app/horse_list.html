@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Лабораторная работа №6{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for horse in object_list %}
+            <li>Кличка: {{ horse.horse_name }} с хозяином {{ horse.horse_owner }}</li>
+        {% empty %}
+            <li>Нет лошадей</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

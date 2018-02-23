@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Продукт № {{ product.id }}{% endblock %}
+
+{% block body %}<ul class="panel">Товар с названием<em>
+    {% if product.id == '1' %}
+        Картошка
+    {% elif product.id == '2' %}
+        Морковка
+    {% elif product.id == '3' %}
+        Огурцы
+    {% elif product.id == '4' %}
+        Помидоры
+    {% elif product.id == '5' %}
+        Баклажан
+    {% elif product.id == '6' %}
+        Пицца
+    {% else %}
+        Как ты попал сюда?
+    {% endif %}
+    </em></ul>
+    <a href="../" target="_top">Вернуться на главную страницу</a>
+{% endblock %}

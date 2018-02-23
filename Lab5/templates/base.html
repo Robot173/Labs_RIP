@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    {% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="container">
+    <div class="page-header">Интернет-магазин</div>
+    {% block body %}{% endblock %}
+</body>
+<footer class="text-center">Лабораторная работа №5</footer>
+</html>
